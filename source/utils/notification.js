@@ -1,7 +1,7 @@
 var mandrill = require('node-mandrill');
 var config = require('./../../config')();
 
-function sendTemplate(email, activationLink, callback) {
+function sendTemplate(email, template, merge, callback) {
 	if (!config.mandrill.token) {
 		return callback('no mandrill token. ok for development mode, fail for production mode');
 	}
@@ -9,7 +9,7 @@ function sendTemplate(email, activationLink, callback) {
 	var api = mandrill(config.mandrill.token);
 
 	return api('/messages/send-template', {
-		template_name: 'private-beta-invite',
+		template_name: template,
 		template_content: [],
 		message: {
 			auto_html: false,
@@ -18,15 +18,12 @@ function sendTemplate(email, activationLink, callback) {
 			],
 			merge_vars: [{
 				rcpt: email,
-				vars: [{
-					name: 'activationLink',
-					content: activationLink
-				}]
+				vars: merge
 			}]
 		}
 	}, callback);
 }
 
 module.exports = {
-	send: sendTemplate
+	sendTemplate: sendTemplate
 };
