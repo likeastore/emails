@@ -36,6 +36,10 @@ var config = {
 				repeatAfterMinutes: 15
 			}
 		}
+	},
+
+	mandrill: {
+		token: process.env.MANDRILL_TOKEN
 	}
 };
 
