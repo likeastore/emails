@@ -1,4 +1,5 @@
 var db = require('./../db/dbConnector').db;
+var mongo = require('./../db/dbConnector').mongo;
 
 function inbox (messenger) {
 	return {
@@ -8,8 +9,19 @@ function inbox (messenger) {
 					return callback(err);
 				}
 
-				messenger.publish('emails:read', emails);
+				messenger.publish('emails:readAll', emails);
 				callback(null, emails);
+			});
+		},
+
+		email: function (mailbox, id, callback) {
+			db.emails.findOne({_id: new mongo.ObjectId(id)}, function (err, email) {
+				if (err) {
+					return callback(err);
+				}
+
+				messenger.publish('email:readOne', email);
+				callback(null, email);
 			});
 		},
 

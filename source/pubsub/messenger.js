@@ -1,5 +1,5 @@
-var EventEmmiter = require('events').EventEmmiter;
-var events = new EventEmmiter();
+var EventEmitter = require('events').EventEmitter;
+var events = new EventEmitter();
 
 var messenger = {
 	subscribe: function (ev, handler) {

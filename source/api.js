@@ -16,6 +16,8 @@ function api(app) {
 				return res.send(500, err);
 			}
 
+			console.log(emails);
+
 			res.json(200, emails);
 		});
 	}
@@ -27,6 +29,12 @@ function api(app) {
 			if (err) {
 				return res.send(500, err);
 			}
+
+			if (!email) {
+				return res.send(404);
+			}
+
+			console.log(email);
 
 			res.json(200, email);
 		});
