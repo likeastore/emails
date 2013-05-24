@@ -1,21 +1,9 @@
-function api(app) {
+function routes(app) {
+	app.get('/', master);
 
-	api.get('/api/inbox/:mailbox', getAllEmails);
-	api.get('/api/inbox/:mailbox/:id', getEmailById);
-	api.post('/api/inbox/:mailbox', postNewEmail);
-
-	function getAllEmails (req, res) {
-		res.send(200);
+	function master (req, res) {
+		res.render('master', {title: 'Likeastore. | Emails'});
 	}
-
-	function getEmailById(req, res) {
-		res.send(200);
-	}
-
-	function postNewEmail (req, res) {
-		res.send(201);
-	}
-
 }
 
-module.exports = api;
+module.exports = routes;
