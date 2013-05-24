@@ -8,7 +8,7 @@ function inbox (messenger) {
 					return callback(err);
 				}
 
-				messenger.trigger('emails:read', emails);
+				messenger.publish('emails:read', emails);
 				callback(null, emails);
 			});
 		},
@@ -21,7 +21,7 @@ function inbox (messenger) {
 					return callback(err);
 				}
 
-				messenger.trigger('emails:posted', email);
+				messenger.publish('emails:recieved', email);
 				callback(null, email);
 			});
 		}

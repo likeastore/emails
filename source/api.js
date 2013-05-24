@@ -1,21 +1,47 @@
+var messenger = require('./pubsub/messenger');
+var inboxService = require('./services/inbox');
+
 function api(app) {
+
+	var inbox = inboxService(messenger);
 
 	app.get('/api/inbox/:mailbox', getAllEmails);
 	app.get('/api/inbox/:mailbox/:id', getEmailById);
 	app.post('/api/inbox/:mailbox', postNewEmail);
 
 	function getAllEmails (req, res) {
-		res.send(200);
+		var mailbox = req.params.mailbox;
+		inbox.all(mailbox, function (err, emails) {
+			if (err) {
+				return res.send(500, err);
+			}
+
+			res.json(200, emails);
+		});
 	}
 
 	function getEmailById(req, res) {
-		res.send(200);
+		var mailbox = req.params.mailbox;
+		var id = req.params.id;
+		inbox.email(mailbox, id, function (err, email) {
+			if (err) {
+				return res.send(500, err);
+			}
+
+			res.json(200, email);
+		});
 	}
 
 	function postNewEmail (req, res) {
-		res.send(201);
-	}
+		var mailbox = req.params.mailbox;
+		inbox.post(mailbox, req.body, function (err, email) {
+			if (err) {
+				return res.send(500, err);
+			}
 
+			res.json(201, email);
+		});
+	}
 }
 
 module.exports = api;
