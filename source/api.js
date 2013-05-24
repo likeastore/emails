@@ -1,7 +1,6 @@
-var messenger = require('./pubsub/messenger');
 var inboxService = require('./services/inbox');
 
-function api(app) {
+function api(app, messenger) {
 
 	var inbox = inboxService(messenger);
 
@@ -15,8 +14,6 @@ function api(app) {
 			if (err) {
 				return res.send(500, err);
 			}
-
-			console.log(emails);
 
 			res.json(200, emails);
 		});
@@ -33,8 +30,6 @@ function api(app) {
 			if (!email) {
 				return res.send(404);
 			}
-
-			console.log(email);
 
 			res.json(200, email);
 		});

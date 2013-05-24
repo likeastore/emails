@@ -28,7 +28,7 @@ function inbox (messenger) {
 		post: function (mailbox, email, callback) {
 			email.mailbox = mailbox;
 
-			db.emails.insert(email, function (err, email) {
+			db.emails.save(email, function (err, emails) {
 				if (err) {
 					return callback(err);
 				}
