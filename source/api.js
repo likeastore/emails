@@ -1,4 +1,5 @@
 var inboxService = require('./services/inbox');
+var invites = require('./services/sendInvites');
 
 function api(app, messenger) {
 
@@ -7,6 +8,8 @@ function api(app, messenger) {
 	app.get('/api/inbox/:mailbox', getAllEmails);
 	app.get('/api/inbox/:mailbox/:id', getEmailById);
 	app.post('/api/inbox/:mailbox', postNewEmail);
+
+	app.post('/api/sendInvites', sendInvites);
 
 	function getAllEmails (req, res) {
 		var mailbox = req.params.mailbox;
@@ -49,6 +52,16 @@ function api(app, messenger) {
 			}
 
 			res.json(201, emails);
+		});
+	}
+
+	function sendInvites (req, res) {
+		invites(function (err) {
+			if (err) {
+				return res.send(500);
+			}
+
+			res.send(201);
 		});
 	}
 }
