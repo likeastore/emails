@@ -31,7 +31,7 @@ function inbox (messenger) {
 				return email;
 			});
 
-			db.emails.save(extended, function (err, recievedEmails) {
+			db.emails.insert(extended, function (err, recievedEmails) {
 				if (err) {
 					return callback(err);
 				}
