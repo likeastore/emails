@@ -39,12 +39,16 @@ function api(app, messenger) {
 		var mailbox = req.params.mailbox;
 		var mandrillEvents = JSON.parse(req.body.mandrill_events);
 
-		inbox.post(mailbox, mandrillEvents[0], function (err, email) {
+		var inbound = mandrillEvents.filter(function (evt) {
+			return evt.event === 'inbound';
+		});
+
+		inbox.post(mailbox, inbound, function (err, emails) {
 			if (err) {
 				return res.send(500, err);
 			}
 
-			res.json(201, email);
+			res.json(201, emails);
 		});
 	}
 }

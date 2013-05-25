@@ -25,16 +25,19 @@ function inbox (messenger) {
 			});
 		},
 
-		post: function (mailbox, email, callback) {
-			email.mailbox = mailbox;
+		post: function (mailbox, emails, callback) {
+			var extended = emails.map(function (email) {
+				email.mailbox = mailbox;
+				return email;
+			});
 
-			db.emails.save(email, function (err, emails) {
+			db.emails.save(extended, function (err, recievedEmails) {
 				if (err) {
 					return callback(err);
 				}
 
-				messenger.publish('emails:recieved', email);
-				callback(null, email);
+				messenger.publish('emails:recieved', recievedEmails);
+				callback(null, recievedEmails);
 			});
 		}
 	};
