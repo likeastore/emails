@@ -21,7 +21,7 @@
     "memstream": "0.0.1",
     "node-logentries": "~0.1.0",
     "node-mandrill": "~1.0.1",
-    "config": "git+ssh://git@github.com:likeastore/config.git"
+    "config": "git://github.com/likeastore/config.git"
   },
   "engines": {
     "node": "0.8.x"
