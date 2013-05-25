@@ -14,13 +14,18 @@ function forwarder (messenger) {
 		return mandrill('/messages/send', {
 			message: {
 				text: email.msg.text,
-				from_email: email.msg.from_email,
-				from_name: email.msg.from_name,
+				html: email.msg.html,
+				from_email: email.msg.from_email || '',
+				from_name: email.msg.from_name || '',
 				subject: email.msg.subject,
 				to: developers
 			}
 		}, function (err, resp) {
 			// do nothing
+			if (err) {
+				return console.log(err);
+			}
+
 			console.log(resp);
 		});
 	}
