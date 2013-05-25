@@ -37,7 +37,9 @@ function api(app, messenger) {
 
 	function postNewEmail (req, res) {
 		var mailbox = req.params.mailbox;
-		inbox.post(mailbox, req.body, function (err, email) {
+		var mandrillEvents = JSON.parse(req.body.mandrill_events);
+
+		inbox.post(mailbox, mandrillEvents[0], function (err, email) {
 			if (err) {
 				return res.send(500, err);
 			}
