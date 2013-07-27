@@ -24,7 +24,7 @@ function sendPublicBeta(callback) {
 					}
 
 					logger.success('sent email to: ' + subscriber.email + ' successfully' );
-					subscribers.update(subscriber, {invitedTo: 'private-beta', emailSent: new Date()}, callback);
+					subscribers.update(subscriber, {invitedTo: 'public-beta', emailSent: new Date()}, callback);
 				});
 			};
 		});
