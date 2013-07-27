@@ -1,5 +1,5 @@
 var util = require('util');
-var config = require('likeastore-config');
+var config = require('../../config');
 var mandrill = require('node-mandrill')(config.mandrill.token);
 
 function forwarder (messenger) {
@@ -8,7 +8,8 @@ function forwarder (messenger) {
 	messenger.subscribe('emails:recieved', emailsRecieved);
 
 	var developers = [
-		{email: 'alexander.beletsky@gmail.com'}
+		{email: 'alexander.beletsky@gmail.com'},
+		{email: 'dmitri.voronianski@gmail.com'}
 	];
 
 	function emailsRecieved (emails) {

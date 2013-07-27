@@ -1,5 +1,5 @@
 var mandrill = require('node-mandrill');
-var config = require('likeastore-config');
+var config = require('../../config');
 
 function sendTemplate(email, template, merge, callback) {
 	if (!config.mandrill.token) {

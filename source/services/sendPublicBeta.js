@@ -4,7 +4,7 @@ var db = require('./../db/dbConnector').db;
 var subscribers = require('./../db/subscribers');
 var logger = require('./../utils/logger');
 var notification = require('./../utils/notification');
-var config = require('likeastore-config');
+var config = require('../../config');
 
 function sendPublicBeta(callback) {
 	logger.info('send pubilc beta invites for ' + process.env.NODE_ENV);
