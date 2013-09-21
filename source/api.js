@@ -3,6 +3,8 @@ var invites = require('./services/sendInvites');
 var publicBeta = require('./services/sendPublicBeta');
 var septemberAnnounce = require('./services/sendSeptemberAnnounce');
 
+var db = require('./db/dbConnector').db;
+
 function api(app, messenger) {
 
 	var inbox = inboxService(messenger);
@@ -14,6 +16,8 @@ function api(app, messenger) {
 	app.post('/api/send/invites', sendInvites);
 	app.post('/api/send/publicbeta', sendPublicBeta);
 	app.post('/api/send/september', sendSeptemberAnnounce);
+
+	app.get('/api/show/index', showAllIndexes);
 
 	function getAllEmails (req, res) {
 		var mailbox = req.params.mailbox;
@@ -86,6 +90,12 @@ function api(app, messenger) {
 			}
 
 			res.send(201);
+		});
+	}
+
+	function showAllIndexes (req, res) {
+		db.items.getIndexes(function (err, indexes) {
+			res.json(indexes);
 		});
 	}
 }
