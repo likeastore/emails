@@ -1,6 +1,7 @@
 var inboxService = require('./services/inbox');
 var invites = require('./services/sendInvites');
 var publicBeta = require('./services/sendPublicBeta');
+var septemberAnnounce = require('./services/sendSeptemberAnnounce');
 
 function api(app, messenger) {
 
@@ -12,6 +13,7 @@ function api(app, messenger) {
 
 	app.post('/api/send/invites', sendInvites);
 	app.post('/api/send/publicbeta', sendPublicBeta);
+	app.post('/api/send/september', sendSeptemberAnnounce);
 
 	function getAllEmails (req, res) {
 		var mailbox = req.params.mailbox;
@@ -69,6 +71,16 @@ function api(app, messenger) {
 
 	function sendPublicBeta (req, res) {
 		publicBeta(function (err) {
+			if (err) {
+				return res.send(500);
+			}
+
+			res.send(201);
+		});
+	}
+
+	function sendSeptemberAnnounce (req, res) {
+		septemberAnnounce(function (err) {
 			if (err) {
 				return res.send(500);
 			}

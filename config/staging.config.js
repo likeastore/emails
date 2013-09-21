@@ -34,7 +34,7 @@ var config = {
 	},
 
 	logentries: {
-		token: '5c58b5f9-31b0-432d-92e0-efe0561b2416'
+		token: '445df5be-3afd-466e-b39a-821393f40ed7'
 	},
 
 	collector: {

@@ -12,7 +12,12 @@
 <body>
 	<header class="main-header clearfix">
 		<h1>Likeastore Emails System.</h1>
+		<p>on environment: <%= env %></p>
 	</header>
-	<div class="main-viewer"></div>
+	<div class="main-viewer">
+		<form action="/api/send/september" method="post">
+			<button type="submit">Send September Announce</button>
+		</form>
+	</div>
 </body>
 </html>
