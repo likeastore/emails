@@ -71,7 +71,8 @@ function sendPublicBeta(callback) {
 					message: {
 						auto_html: null,
 						to: to
-					}
+					},
+					preserve_recipients: false
 				}, callback);
 			};
 		});
