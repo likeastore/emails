@@ -20,7 +20,8 @@
     "ejs-locals": "~1.0.2",
     "memstream": "0.0.1",
     "node-logentries": "~0.1.0",
-    "node-mandrill": "~1.0.1"
+    "node-mandrill": "~1.0.1",
+    "sinon": "~1.7.3"
   },
   "engines": {
     "node": "0.8.x"
