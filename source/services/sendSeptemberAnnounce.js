@@ -70,9 +70,9 @@ function sendPublicBeta(callback) {
 					template_content: [],
 					message: {
 						auto_html: null,
-						to: to
+						to: to,
+						preserve_recipients: false
 					},
-					preserve_recipients: false
 				}, callback);
 			};
 		});
