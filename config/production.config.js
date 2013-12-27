@@ -30,11 +30,11 @@ var config = {
 	},
 
 	mandrill: {
-		token: process.env.MANDRILL_TOKEN
+		token: '2kXX0stV1Hf56y9DYZts3A'
 	},
 
 	logentries: {
-		token: process.env.LOGENTRIES_TOKEN
+		token: '9078da74-86f6-4e73-bdcd-3b03f325c496'
 	},
 
 	collector: {
