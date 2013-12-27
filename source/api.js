@@ -2,6 +2,7 @@ var inboxService = require('./services/inbox');
 var invites = require('./services/sendInvites');
 var publicBeta = require('./services/sendPublicBeta');
 var septemberAnnounce = require('./services/sendSeptemberAnnounce');
+var disabledNetworks = require('./services/sendDisabledNetworks');
 
 var db = require('./db/dbConnector').db;
 
@@ -16,6 +17,7 @@ function api(app, messenger) {
 	app.post('/api/send/invites', sendInvites);
 	app.post('/api/send/publicbeta', sendPublicBeta);
 	app.post('/api/send/september', sendSeptemberAnnounce);
+	app.post('/api/send/disabled', sendDisabledNetworks);
 
 	app.get('/api/show/index', showAllIndexes);
 
@@ -85,6 +87,16 @@ function api(app, messenger) {
 
 	function sendSeptemberAnnounce (req, res) {
 		septemberAnnounce(function (err) {
+			if (err) {
+				return res.send(500);
+			}
+
+			res.send(201);
+		});
+	}
+
+	function sendDisabledNetworks (req, res) {
+		disabledNetworks(function (err) {
 			if (err) {
 				return res.send(500);
 			}
