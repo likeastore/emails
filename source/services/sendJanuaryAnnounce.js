@@ -7,8 +7,6 @@ var config = require('../../config');
 var mandrill = require('node-mandrill');
 
 function sendPublicBeta(callback) {
-	logger.info('send september invites for ' + process.env.NODE_ENV);
-
 	if (!config.mandrill.token) {
 		return callback('no mandrill token. ok for development mode, fail for production mode');
 	}
@@ -66,7 +64,7 @@ function sendPublicBeta(callback) {
 				logger.info('sending notification...');
 
 				mandrillApi('/messages/send-template', {
-					template_name: 'likeastore-1-1-release-announce',
+					template_name: 'likeastore-announce-version-2-0',
 					template_content: [],
 					message: {
 						auto_html: null,
@@ -87,7 +85,7 @@ function sendPublicBeta(callback) {
 	}
 
 	function splitToChunks(emails) {
-		var chunks = [], size = 100;
+		var chunks = [], size = 300;
 
 		while (emails.length > 0) {
 			chunks.push(emails.splice(0, size));
