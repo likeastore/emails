@@ -69,7 +69,7 @@ function sendPublicBeta(callback) {
 				logger.info('sending notification...');
 
 				//console.log(to);
-				console.log(util.inspect(merge, {depth: 4}));
+				console.log(util.inspect(merge, {depth: 6}));
 
 				callback(null);
 
