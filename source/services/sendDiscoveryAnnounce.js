@@ -1,3 +1,4 @@
+var util = require('util');
 var async = require('async');
 var util = require('util');
 var db = require('./../db/dbConnector').db;
@@ -67,8 +68,8 @@ function sendPublicBeta(callback) {
 			return function(callback) {
 				logger.info('sending notification...');
 
-				console.log(to);
-				console.log(merge);
+				//console.log(to);
+				console.log(util.inspect(merge, {depth: 4}));
 
 				callback(null);
 
