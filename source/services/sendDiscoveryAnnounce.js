@@ -67,17 +67,22 @@ function sendPublicBeta(callback) {
 			return function(callback) {
 				logger.info('sending notification...');
 
-				mandrillApi('/messages/send-template', {
-					template_name: 'likeastore-announce-v3-0',
-					template_content: [],
+				console.log(to);
+				console.log(merge);
 
-					message: {
-						auto_html: null,
-						to: to,
-						preserve_recipients: false,
-						merge_vars: merge
-					},
-				}, callback);
+				callback(null);
+
+				// mandrillApi('/messages/send-template', {
+				// 	template_name: 'likeastore-announce-v3-0',
+				// 	template_content: [],
+
+				// 	message: {
+				// 		auto_html: null,
+				// 		to: to,
+				// 		preserve_recipients: false,
+				// 		merge_vars: merge
+				// 	},
+				// }, callback);
 			};
 		});
 
