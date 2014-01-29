@@ -45,7 +45,7 @@ function sendPublicBeta(callback) {
 				return sendNofications(null);
 			}
 
-			emails[user.email] = user._id;
+			emails[user.email] = user._id.toString();
 		});
 	}
 
