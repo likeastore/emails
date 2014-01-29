@@ -68,6 +68,8 @@ function sendPublicBeta(callback) {
 			return function(callback) {
 				logger.info('sending notification...');
 
+				console.log(util.inspect(merge, {depth: 6}));
+
 				mandrillApi('/messages/send-template', {
 					template_name: 'likeastore-announce-v3-0',
 					template_content: [],
