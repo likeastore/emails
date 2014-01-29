@@ -36,7 +36,7 @@ function sendPublicBeta(callback) {
 	function readAllUsersEmails() {
 		logger.info('reading users emails...');
 
-		db.users.find({unsubscribed: {$exists: false}}).forEach(function (err, user) {
+		db.users.find({unsubscribed: {$exists: false}, firstTimeUser: {$exists: false}}).forEach(function (err, user) {
 			if (err) {
 				return callback(err);
 			}
