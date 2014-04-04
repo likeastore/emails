@@ -6,6 +6,7 @@ var disabledNetworks = require('./services/sendDisabledNetworks');
 var januaryAnnounce = require('./services/sendJanuaryAnnounce');
 var discoveryAnnounce = require('./services/sendDiscoveryAnnounce');
 var marchAnnounce = require('./services/sendMarchAnnounce');
+var aprilAnnounce = require('./services/sendAprilAnnounce');
 
 var db = require('./db/dbConnector').db;
 
@@ -24,6 +25,7 @@ function api(app, messenger) {
 	app.post('/api/send/january', sendJanuaryAnnounce);
 	app.post('/api/send/discovery', sendDiscoveryAnnounce);
 	app.post('/api/send/march', sendMarchAnnounce);
+	app.post('/api/send/april', sendAprilAnnounce);
 
 	app.get('/api/show/index', showAllIndexes);
 
@@ -133,6 +135,16 @@ function api(app, messenger) {
 
 	function sendMarchAnnounce (req, res) {
 		marchAnnounce(function (err) {
+			if (err) {
+				return res.send(500);
+			}
+
+			res.send(201);
+		});
+	}
+
+	function sendAprilAnnounce (req, res) {
+		aprilAnnounce(function (err) {
 			if (err) {
 				return res.send(500);
 			}
