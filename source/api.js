@@ -7,6 +7,7 @@ var januaryAnnounce = require('./services/sendJanuaryAnnounce');
 var discoveryAnnounce = require('./services/sendDiscoveryAnnounce');
 var marchAnnounce = require('./services/sendMarchAnnounce');
 var aprilAnnounce = require('./services/sendAprilAnnounce');
+var safariAnnounce = require('./services/sendSafariAnnounce');
 
 var db = require('./db/dbConnector').db;
 
@@ -26,8 +27,7 @@ function api(app, messenger) {
 	app.post('/api/send/discovery', sendDiscoveryAnnounce);
 	app.post('/api/send/march', sendMarchAnnounce);
 	app.post('/api/send/april', sendAprilAnnounce);
-
-	app.get('/api/show/index', showAllIndexes);
+	app.post('/api/send/safari', sendSafariAnnounce);
 
 	function getAllEmails (req, res) {
 		var mailbox = req.params.mailbox;
@@ -153,9 +153,13 @@ function api(app, messenger) {
 		});
 	}
 
-	function showAllIndexes (req, res) {
-		db.items.getIndexes(function (err, indexes) {
-			res.json(indexes);
+	function sendSafariAnnounce (req, res) {
+		safariAnnounce(function (err) {
+			if (err) {
+				return res.send(500);
+			}
+
+			res.send(201);
 		});
 	}
 }
