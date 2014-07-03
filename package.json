@@ -26,5 +26,9 @@
   },
   "engines": {
     "node": "0.10.x"
+  },
+  "devDependencies": {
+    "gulp": "^3.8.5",
+    "gulp-swig": "^0.7.0"
   }
 }
