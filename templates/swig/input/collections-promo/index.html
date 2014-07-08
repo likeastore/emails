@@ -7,7 +7,7 @@
 <title>Fantastic stuff from Likeastore!</title>
 <style>
 body { margin: 0; }
-a { color: #56C7AA; }
+a { color: #f03e56; }
 </style>
 </head>
 <body style="background-color: #f3f3f6; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; margin: 0; padding: 0;">
@@ -69,32 +69,22 @@ a { color: #56C7AA; }
 															<p style="font-size:22px;font-weight:900;padding:0;margin:20px 0 0;">Our collections had a great week.</p>
 
 															<p style="margin:10px 45px 0;padding:0;font-size:16px">
-																Follow the most popular collections created by awesome Likeastore users during last days!
+																Follow the most popular collections and see what's trending on Likeastore!
 															</p>
 														</span>
 													</td>
 													<td width="20"></td>
 												</tr>
-
-												<tr style="background-color:#ffffff">
-													<td colspan="3">
-														<ul>
-															{% for coll in collections %}
-															<li style="display: inline-block; float: left; margin: 15px 26px 0 4px; width: 120px; position: relative; cursor: pointer;">
-																<a href="{{coll.url}}" style="text-decoration:none;">
-																	<div class="cover" style="background-image: url({{coll.thumbnail}}); background-color: {{coll.color}}; height: 150px; background-repeat: no-repeat; background-position: center; -webkit-background-size: cover; background-size: cover; position: relative; -webkit-box-shadow: 0 1px 0 rgba(0,0,0,.1), 1px 1px 2px rgba(0,0,0,.2), inset 2px 0 0 rgba(0,0,0,.2); box-shadow: 0 1px 0 rgba(0,0,0,.1), 1px 1px 2px rgba(0,0,0,.2), inset 2px 0 0 rgba(0,0,0,.2); border-radius: 0 5px 5px 0; overflow: hidden;">
-																		<div style="background-color: #fff; color: #555; font-size: 12px; font-family:'Helvetica Neue',Helvetica,Arial,sans-serif; font-weight: bold; line-height: 16px; margin: 10px 8px 10px 10px; padding: 6px 8px; overflow: hidden; border-radius: 1px;">{{coll.title}}</div>
-																	</div>
-																</a>
-															</li>
-															{% endfor %}
-														</ul>
-													</td>
-												</tr>
-												<tr height="30">
+												<tr height="20">
 													<td colspan="3"></td>
 												</tr>
-
+												<tr style="background-color:#ffffff">
+													<td colspan="3">
+														{% for coll in collections %}
+															{% include './collection-row.html' with coll %}
+														{% endfor %}
+													</td>
+												</tr>
 											</tbody>
 										</table>
 									</td>
@@ -137,7 +127,7 @@ a { color: #56C7AA; }
 												</tr>
 												<tr>
 													<td height="52" style="text-align:center;padding:0;margin:0;width:100%;background-color: #56c7aa; background: linear-gradient(75deg, rgba(41,182,168,.96) 0%, rgba(86, 199, 170,.98) 120%); background: -webkit-linear-gradient(15deg, rgba(63, 192, 193, 0.98) 0%, rgba(66, 207, 176, 0.96) 100%); background: linear-gradient(75deg, rgba(63, 192, 193, 0.98) 0%, rgba(66, 207, 176, 0.96) 100%);border-radius:2px">
-														<a style="text-decoration:none;color:#fff;font-size:18px;font-weight:bold;display:block;width:100%;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif" href="https://likeastore.com" target="_blank">Show me more</a>
+														<a style="text-decoration:none;color:#fff;font-size:18px;font-weight:bold;display:block;width:100%;font-family:'Helvetica Neue',Helvetica,Arial,sans-serif" href="https://likeastore.com" target="_blank">Take me to Likeastore</a>
 													</td>
 												</tr>
 												<tr>
@@ -153,6 +143,38 @@ a { color: #56C7AA; }
 					<td width="50px"></td>
 				</tr>
 				<tr height="15px"></tr>
+			</tbody>
+		</table>
+	</td>
+</tr>
+
+<tr><td height="25"></td></tr>
+
+<tr>
+	<td>
+		<table border="0" cellspacing="0" cellpadding="0" align="center" width="100%" style="background:#ffffff;border-radius:6px">
+			<tbody>
+				<tr>
+					<td align="center">
+						<a href="https://itunes.apple.com/us/app/likeastore/id88190295" style="text-decoration:none" target="_blank">
+
+							<table border="0" cellspacing="0" width="100%">
+
+								<tbody>
+									<tr>
+
+										<td style="width:160px;padding:20px 0 20px 40px">
+											<img border="0" src="https://tour.likeastore.com/img/small_iphone.png" alt="Download our iPhone app" style="width:124px;min-height:143px"></td>
+										<td style="font-family:sans-serif;font-weight:bold;text-align:left;padding:20px 40px 20px 0">
+											<div style="color:#333333;font-size:21px;margin-bottom:10px">Like anything, from anywhere.</div>
+											<div style="padding:6px 18px;border-radius:3px;text-align:center;background-color:#f03e56;color:#ffffff;font-size:14px;display:inline-block">Download our iPhone app</div>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</a>
+					</td>
+				</tr>
 			</tbody>
 		</table>
 	</td>
