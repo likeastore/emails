@@ -127,12 +127,11 @@ function sendCollectionPromo(callback) {
 		logger.info('prepared ' + allEmails.length + ' to send...');
 
 		var sendTasks = allEmails.map(function (email) {
-
-			var data = _.extend({userId: emails[email]}, {collections: collectionsWithUtm});
-			var html = template(data);
-
 			return function(callback) {
 				logger.info('sending notification to ' + email);
+
+				var data = _.extend({userId: emails[email]}, {collections: collectionsWithUtm});
+				var html = template(data);
 
 				mandrillApi('/messages/send', {
 					message: {
@@ -140,6 +139,7 @@ function sendCollectionPromo(callback) {
 						subject: subject,
 						from_email: 'no-reply@likeastore.com',
 						from_name: 'Likeastore Team',
+						track_clicks: false,
 						to: [{email: email}],
 						preserve_recipients: false,
 					},
