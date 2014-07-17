@@ -116,18 +116,19 @@ function sendCollectionPromo(callback) {
 	function sendNofications() {
 		var allEmails = Object.keys(emails);
 
+		var collectionsWithUtm = collections.map(function (collection) {
+			var clone = _.clone(collection);
+			clone.url += utm;
+			clone.authorUrl += utm;
+
+			return clone;
+		});
+
 		logger.info('prepared ' + allEmails.length + ' to send...');
 
 		var sendTasks = allEmails.map(function (email) {
-			var input = collections.map(function (collection) {
-				var clone = _.clone(collection);
-				clone.url += utm;
-				clone.authorUrl += utm;
 
-				return clone;
-			});
-
-			var data = _.extend({userId: emails[email]}, {collections: input});
+			var data = _.extend({userId: emails[email]}, {collections: collectionsWithUtm});
 			var html = template(data);
 
 			return function(callback) {
