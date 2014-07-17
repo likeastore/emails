@@ -22,7 +22,8 @@
     "memstream": "0.0.1",
     "node-logentries": "~0.1.2",
     "node-mandrill": "~1.0.1",
-    "sinon": "~1.7.3"
+    "sinon": "~1.7.3",
+    "swig": "~1.4.1"
   },
   "engines": {
     "node": "0.10.x"
