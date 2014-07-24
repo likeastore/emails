@@ -9,7 +9,7 @@ var notification = require('./../../utils/notification');
 var config = require('../../../config');
 var mandrill = require('node-mandrill');
 
-var subject = 'Best collections of Startups, Design, JavaScript and more';
+var subject = 'Best collections of Motion Design, Music, Movies and more';
 var utm = '?utm_source=coll-weekly&utm_medium=email&utm_campaign=coll-promo-w30';
 
 var collections = [
