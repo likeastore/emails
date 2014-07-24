@@ -1,15 +1,10 @@
-var sendCollectionPromoW29 = require('./services/collectionsPromo/promo-w29');
+var sendCollectionPromo = require('./services/collectionsPromo/promo-w30');
 
-function api(app, messenger) {
+function api(app) {
 
-	app.post('/api/send/collPromoW29', function (req, res) {
-		sendCollectionPromoW29(function (err) {
-			if (err) {
-				return res.send(500);
-			}
-
-			res.send(201);
-		});
+	app.post('/api/send/collPromo', function (req, res) {
+		sendCollectionPromo(function () {});
+		res.send(201);
 	});
 }
 
