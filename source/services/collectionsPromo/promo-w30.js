@@ -26,6 +26,17 @@ var collections = [
 		"authorUrl": "https://app.likeastore.com/u/Nikitaita"
 	},
 	{
+		"id" : "535123356c39511000000001",
+		"color" : "#56c7aa",
+		"public" : true,
+		"title" : "Think Javascript",
+		"description": "The greatest collection for Javascript developers",
+		"url": "https://app.likeastore.com/u/voronianski/535123356c39511000000001",
+		"user" : "dmitri.voronianski@gmail.com",
+		"name" : "voronianski",
+		"authorUrl": "https://app.likeastore.com/u/voronianski"
+	},
+	{
 		"id" : "5355252fedce3c0c00000001",
 		"color" : "#56c7aa",
 		"public" : true,
@@ -48,17 +59,6 @@ var collections = [
 		"user" : "yl.ksaa@gmail.com",
 		"name" : "yl_ksa",
 		"authorUrl": "https://app.likeastore.com/u/yl_ksa"
-	},
-	{
-		"id" : "535123356c39511000000001",
-		"color" : "#56c7aa",
-		"public" : true,
-		"title" : "Think Javascript",
-		"description": "The greatest collection for Javascript developers",
-		"url": "https://app.likeastore.com/u/voronianski/535123356c39511000000001",
-		"user" : "dmitri.voronianski@gmail.com",
-		"name" : "voronianski",
-		"authorUrl": "https://app.likeastore.com/u/voronianski"
 	},
 	{
 		"id" : "535e0b4ebc7cb00e0000000d",
