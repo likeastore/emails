@@ -1,4 +1,4 @@
-var sendCollectionPromo = require('./services/collectionsPromo/promo-w30');
+var sendCollectionPromo = require('./services/collectionsPromo/promo-w31');
 
 function api(app) {
 
