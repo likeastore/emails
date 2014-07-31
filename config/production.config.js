@@ -34,7 +34,7 @@ var config = {
 	},
 
 	logentries: {
-		token: '9078da74-86f6-4e73-bdcd-3b03f325c496'
+		token: process.env.LOGENTRIES_TOKEN
 	},
 
 	collector: {
