@@ -1,4 +1,4 @@
-var sendCollectionPromo = require('./services/collectionsPromo/promo-w31');
+var sendCollectionPromo = require('./services/collectionsPromo/promo-w32');
 var sendAnnouce = require('./services/sendAugustAnnounce');
 
 function api(app) {
