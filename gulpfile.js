@@ -12,3 +12,5 @@ gulp.task('watch', function () {
 		gulp.run('mail-templates');
 	});
 });
+
+gulp.task('default', ['mail-templates']);
