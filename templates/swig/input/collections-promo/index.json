@@ -3,64 +3,59 @@
 	"collections": [
 	{
 		"color" : "#56c7aa",
-		"description" : "Pictures, architecture, objects, everything with wood!",
+		"description" : "AngularJS MVC framework",
 		"public" : true,
-		"thumbnail" : "http://38.media.tumblr.com/22c6496a4810b79e17585ad974e87dfe/tumblr_na50u61cmO1qcetpuo1_1280.jpg",
-		"title" : "Wood",
-		"user" : "timtimp@bluewin.ch",
-		"email" : "timtimp@bluewin.ch",
-		"name" : "time.peron",
-		"username" : "time.peron",
-		"authorUrl": "https://app.likeastore.com/u/time.peron",
-		"url": "https://app.likeastore.com/u/time.peron/53e92b90b00d0a0f00000013"
-	},
-	{
-		"color" : "#e74c3c",
-		"description" : "Interesting and new things in the medical field.",
-		"public" : true,
-		"thumbnail" : "http://cdn3.kevinmd.com/blog/wp-content/uploads/shutterstock_114588181.jpg",
-		"title" : "Medical Geek",
-		"user" : "wock@rocketmail.com",
-		"name" : "Volodymyr.Khylchuk",
-		"username" : "Volodymyr.Khylchuk",
-		"authorUrl": "https://app.likeastore.com/u/Volodymyr.Khylchuk",
-		"url": "https://app.likeastore.com/u/Volodymyr.Khylchuk/53e5ee9cb00d0a0f00000011"
-	},
-	{
-		"color" : "#e74c3c",
-		"description" : "Welcome Node's elder brother - asynchronous I/O for Lua.",
-		"public" : true,
-		"title" : "Luvit.io <3",
-		"user" : "dmitri.voronianski@gmail.com",
-		"name" : "voronianski",
-		"username" : "voronianski",
-		"website" : "http://pixelhunter.me",
-		"authorUrl": "https://app.likeastore.com/u/voronianski",
-		"url": "https://app.likeastore.com/u/voronianski/53e1353728a92e0f00000003"
-	},
-	{
-		"color" : "#e74c3c",
-		"public" : true,
-		"thumbnail" : "http://addyosmani.com/resources/essentialjsdesignpatterns/cover/cover.jpg",
-		"title" : "WebDev articles",
-		"description": "Great collection of web development articles.",
-		"user" : "i@tjrus.com",
-		"displayName" : "Vasiliy Zubach",
-		"name" : "TjRus",
-		"authorUrl": "https://app.likeastore.com/u/TjRus",
-		"url": "https://app.likeastore.com/u/TjRus/535a31e7813b3a0f00000004"
+		"title" : "AngularJS",
+		"user" : "b11291fc@opayq.com",
+		"name" : "valery.sntx",
+		"username" : "valery.sntx",
+		"url": "https://app.likeastore.com/u/valery.sntx/53ee08d50b0e941400000003",
+		"authorUrl": "https://app.likeastore.com/u/valery.sntx"
 	},
 	{
 		"color" : "#f39c12",
+		"description" : "Resources for lifelong learning",
 		"public" : true,
-		"thumbnail" : "http://img.youtube.com/vi/BAhWXL_tfBE/0.jpg",
-		"title" : "Sport",
-		"description": "Get your inspiration here.",
-		"user" : "hss@live.ru",
-		"email" : "hss@live.ru",
-		"name" : "sergey.homyuk",
-		"username" : "sergey.homyuk",
-		"url": "https://app.likeastore.com/u/sergey.homyuk/53aa778b4727030d00000006",
-		"authorUrl": "https://app.likeastore.com/u/sergey.homyuk"
+		"thumbnail" : "https://i1.ytimg.com/vi/MgIdi9T3kTU/hqdefault.jpg",
+		"title" : "Education",
+		"user" : "jonesitis7@gmail.com",
+		"name" : "summa1910",
+		"url": "https://app.likeastore.com/u/summa1910/53552540edce3c0c00000002",
+		"authorUrl": "https://app.likeastore.com/u/summa1910"
+	},
+	{
+		"color" : "#f39c12",
+		"description" : "Anything related to gadgets, apps or seems geeky.",
+		"public" : true,
+		"thumbnail" : "http://i.kinja-img.com/gawker-media/image/upload/s--8mqEEvIQ--/gyutj96iscys4h3useq8.jpg",
+		"title" : "Tech",
+		"user" : "yl.ksaa@gmail.com",
+		"displayName" : "Wael Hazzazi",
+		"name" : "yl_ksa",
+		"url": "https://app.likeastore.com/u/yl_ksa/531f870049e12d0d0000000f",
+		"authorUrl": "https://app.likeastore.com/u/yl_ksa"
+	},
+	{
+		"color" : "#3498db",
+		"description" : "Contents for and from the nosql world",
+		"public" : true,
+		"title" : "NoSql",
+		"user" : "manuel.martone@gmail.com",
+		"name" : "codebrainr",
+		"url": "https://app.likeastore.com/u/codebrainr/539819f5e45b300f00000026",
+		"authorUrl": "https://app.likeastore.com/u/codebrainr"
+	},
+	{
+		"color" : "#feee43",
+		"description" : "Pet Rescues, Breeders and Advocacy",
+		"public" : true,
+		"title" : "Pet Lovers",
+		"user" : "cmechic@gmail.com",
+		"email" : "cmechic@gmail.com",
+		"location" : "Columbus, Ohio",
+		"name" : "cmechic",
+		"username" : "ecigchic",
+		"url": "https://app.likeastore.com/u/cmechic/53f1416c0b0e941400000012",
+		"authorUrl": "https://app.likeastore.com/u/cmechic"
 	}]
 }
