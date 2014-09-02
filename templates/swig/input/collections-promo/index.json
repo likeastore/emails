@@ -3,59 +3,55 @@
 	"collections": [
 	{
 		"color" : "#56c7aa",
-		"description" : "AngularJS MVC framework",
 		"public" : true,
-		"title" : "AngularJS",
-		"user" : "b11291fc@opayq.com",
-		"name" : "valery.sntx",
-		"username" : "valery.sntx",
-		"url": "https://app.likeastore.com/u/valery.sntx/53ee08d50b0e941400000003",
-		"authorUrl": "https://app.likeastore.com/u/valery.sntx"
+		"title" : "Data Science",
+		"description": "Data science, mostly with Python.",
+		"user" : "debie.daan@gmail.com",
+		"name" : "DandyDev",
+		"url": "https://app.likeastore.com/u/DandyDev/53a93bebaa267c0d00000001",
+		"authorUrl": "https://app.likeastore.com/u/DandyDev"
 	},
 	{
-		"color" : "#f39c12",
-		"description" : "Resources for lifelong learning",
+		"color" : "#56c7aa",
 		"public" : true,
-		"thumbnail" : "https://i1.ytimg.com/vi/MgIdi9T3kTU/hqdefault.jpg",
-		"title" : "Education",
-		"user" : "jonesitis7@gmail.com",
-		"name" : "summa1910",
-		"url": "https://app.likeastore.com/u/summa1910/53552540edce3c0c00000002",
-		"authorUrl": "https://app.likeastore.com/u/summa1910"
+		"thumbnail" : "https://d13yacurqjgara.cloudfront.net/users/413617/screenshots/1582971/long_dark_1x.png",
+		"title" : "UI - interface",
+		"description": "Great collection of interfaces.",
+		"user" : "i@tjrus.com",
+		"name" : "TjRus",
+		"url": "https://app.likeastore.com/u/TjRus/531e32859a9b500c00000078",
+		"authorUrl": "https://app.likeastore.com/u/TjRus"
 	},
 	{
-		"color" : "#f39c12",
-		"description" : "Anything related to gadgets, apps or seems geeky.",
+		"color" : "#56c7aa",
 		"public" : true,
-		"thumbnail" : "http://i.kinja-img.com/gawker-media/image/upload/s--8mqEEvIQ--/gyutj96iscys4h3useq8.jpg",
-		"title" : "Tech",
-		"user" : "yl.ksaa@gmail.com",
-		"displayName" : "Wael Hazzazi",
-		"name" : "yl_ksa",
-		"url": "https://app.likeastore.com/u/yl_ksa/531f870049e12d0d0000000f",
-		"authorUrl": "https://app.likeastore.com/u/yl_ksa"
+		"title" : "Front-end tools",
+		"description": "You daily tools in Front-End development.",
+		"user" : "contact@onaliugo.fr",
+		"email" : "contact@onaliugo.fr",
+		"name" : "onaliugo",
+		"url": "https://app.likeastore.com/u/onaliugo/539ea335e45b300f00000039",
+		"authorUrl": "https://app.likeastore.com/u/onaliugo"
 	},
 	{
-		"color" : "#3498db",
-		"description" : "Contents for and from the nosql world",
+		"color" : "#e74c3c",
 		"public" : true,
-		"title" : "NoSql",
-		"user" : "manuel.martone@gmail.com",
-		"name" : "codebrainr",
-		"url": "https://app.likeastore.com/u/codebrainr/539819f5e45b300f00000026",
-		"authorUrl": "https://app.likeastore.com/u/codebrainr"
+		"thumbnail" : "http://distilleryimage2.s3.amazonaws.com/7965fa34c15a11e382a80002c9d942ea_8.jpg",
+		"title" : "Sports",
+		"description" : "Amazing sports shots.",
+		"user" : "timtimp@bluewin.ch",
+		"name" : "time.peron",
+		"url": "https://app.likeastore.com/u/time.peron/534399aa19979c0b00000026",
+		"authorUrl": "https://app.likeastore.com/u/time.peron"
 	},
 	{
-		"color" : "#feee43",
-		"description" : "Pet Rescues, Breeders and Advocacy",
+		"color" : "#eab6fd",
+		"description" : "Web, mobile analytics related articles",
 		"public" : true,
-		"title" : "Pet Lovers",
-		"user" : "cmechic@gmail.com",
-		"email" : "cmechic@gmail.com",
-		"location" : "Columbus, Ohio",
-		"name" : "cmechic",
-		"username" : "ecigchic",
-		"url": "https://app.likeastore.com/u/cmechic/53f1416c0b0e941400000012",
-		"authorUrl": "https://app.likeastore.com/u/cmechic"
-	}]
-}
+		"title" : "Analytics",
+		"user" : "alexander.beletsky@gmail.com",
+		"name" : "alexanderbeletsky",
+		"url": "https://app.likeastore.com/u/alexanderbeletsky/531ae71679fd7b0d0000002c",
+		"authorUrl": "https://app.likeastore.com/u/alexanderbeletsky"
+	}
+]}
